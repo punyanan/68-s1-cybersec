@@ -1,6 +1,6 @@
 # Cyber Security
 
 ## Information
-- Punyanan Pateetin
+- Punyanan Pateetin (Namwhan)
 - 6602041630021
 - s6602041630021@email.kmutnb.ac.th
