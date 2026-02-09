@@ -1,0 +1,23 @@
+services:
+  s1app:
+    image: prawee/strapi:latest
+    container_name: 68-s1-app
+    restart: always
+    ports:
+      - ${APP_PORT}:1337
+    env_file:
+      - .env
+    environment:
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+    networks:
+      - s1-network
+
+networks:
+  s1-network:
+    external: true
+    name: 68-s1-cybersec_default
