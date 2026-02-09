@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  s1admin:                      
+    image: dpage/pgadmin4:latest
+    container_name: 68-s1-admin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PG_ADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PG_ADMIN_PASSWORD}
+    env_file:
+      - .env
+    ports:
+      - ${PG_ADMIN_PORT}:80 
